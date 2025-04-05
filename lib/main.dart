@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'database/database_helper.dart';
 import 'model/user_model.dart';
+import 'blocs/cattle/cattle_bloc.dart';
+import 'package:bloc/bloc.dart';
+import 'package:my_app/user_repository.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -266,8 +266,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
                               MyUser myUser = MyUser.empty;
-                              myUser.email = emailController.text;
-                              myUser.name = nameController.text;
+                              myUser = myUser.copyWith(email: emailController.text);
+                              myUser = myUser.copyWith(name: nameController.text);
 
                               setState(() {
                                 context.read<SignUpBloc>().add(SignUpRequired(
